@@ -35,40 +35,34 @@ You don't need to read input or print anything. Your task is to complete the fun
 
 ## Solution
 
-**Language:** C++  
+**Language:** Python  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-07-14T09:22:27.606Z  
+**Submitted:** 2026-07-14T09:22:49.065Z  
 
-```cpp
-class Solution {
-  public:
-    long long factorSum(int N) {
-        if (N == 1) return 1;
+```py
+class Solution:
+    def factorSum(self, N):
+        if N == 1:
+            return 1
         
-        long long sum = 1;
-        int temp = N;
+        total_sum = 1
+        temp = N
+        p = 2
         
-        for (int p = 2; p * p <= temp; p++) {
-            if (temp % p == 0) {
-                int count = 0;
-                long long power = 1;
-                while (temp % p == 0) {
-                    temp /= p;
-                    count++;
-                    power *= p;
-                }
-                sum *= (power * p - 1) / (p - 1);
-            }
-        }
+        while p * p <= temp:
+            if temp % p == 0:
+                count = 0
+                while temp % p == 0:
+                    temp //= p
+                    count += 1
+                total_sum *= (p ** (count + 1) - 1) // (p - 1)
+            p += 1 if p == 2 else 2  # 2, then 3, 5, 7...
         
-        if (temp > 1) {
-            sum *= (1 + temp);
-        }
+        if temp > 1:
+            total_sum *= (1 + temp)
         
-        return sum;
-    }
-};
+        return total_sum  
 ```
 
 ---
