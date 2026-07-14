@@ -35,9 +35,9 @@ Output: 2
 ## Solution
 
 **Language:** Python  
-**Runtime:** 23 ms (beats 21.48%)  
-**Memory:** 21.8 MB (beats 79.72%)  
-**Submitted:** 2026-07-14T10:10:12.435Z  
+**Runtime:** 0 ms  
+**Memory:** 19.4 MB  
+**Submitted:** 2026-07-14T10:19:38.253Z  
 
 ```py
 from typing import List
@@ -48,8 +48,12 @@ class Solution:
         max_count = 0
         
         for num in nums:
-            count = count + 1 if num == 1 else 0
-            max_count = max(max_count, count)
+            if num == 1:
+                count += 1
+            else:  
+                max_count = max(max_count, count)  
+                count = 0  
+        max_count = max(max_count, count)
         
         return max_count
 ```
