@@ -51,7 +51,7 @@ Output
 **Language:** Python  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-07-15T14:37:03.957Z  
+**Submitted:** 2026-07-15T14:37:52.834Z  
 
 ```py
 def pa
