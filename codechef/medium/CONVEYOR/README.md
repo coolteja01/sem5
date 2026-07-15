@@ -62,10 +62,12 @@ RRLLRLRL
 **Language:** Python  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-07-15T14:41:19.245Z  
+**Submitted:** 2026-07-15T14:49:45.826Z  
 
 ```py
-# cook your dish here
+t = int(input())
+for in range (t)
+ n,
 
 ```
 
