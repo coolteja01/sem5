@@ -51,10 +51,31 @@ Output
 **Language:** Python  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-07-15T14:37:52.834Z  
+**Submitted:** 2026-07-15T14:40:43.368Z  
 
 ```py
-def pa
+t = int(input())
+for _ in range(t):
+    n = int(input())
+    arr = list(map(int, input().split()))
+    changes1 = 0
+    for i in range(n):
+        if i % 2 == 0:  
+            if arr[i] % 2 == 0:
+                changes1 += 1
+        else: 
+            if arr[i] % 2 == 1:
+                changes1 += 1
+    changes2 = 0
+    for i in range(n):
+        if i % 2 == 0:  
+            if arr[i] % 2 == 1:
+                changes2 += 1
+        else: 
+            if arr[i] % 2 == 0:
+                changes2 += 1
+    
+    print(min(changes1, changes2))
 
 ```
 
