@@ -58,26 +58,22 @@ aabb
 **Language:** Python  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-07-15T15:46:48.953Z  
+**Submitted:** 2026-07-15T15:48:05.887Z  
 
 ```py
-
 t = int(input())
 for _ in range(t):
     n = int(input())
     s = list(input().strip())
-    start = -1
+    first_z = -1
     for i in range(n):
-        if s[i] != 'a':
-            start = i
+        if s[i] == 'z':
+            first_z = i
             break
-    
-    if start == -1:
-        s[-1] = 'b'
-    else:
-        i = start
-        while i < n and s[i] != 'a':
-            s[i] = chr(ord(s[i]) + 1)
+    if first_z != -1:
+        i = first_z
+        while i < n and s[i] == 'z':
+            s[i] = 'a'
             i += 1
     
     print(''.join(s))
