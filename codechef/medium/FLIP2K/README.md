@@ -75,7 +75,7 @@ It's impossible to even modify the given string since it only contains one $0$. 
 **Language:** Python  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-07-15T16:25:16.025Z  
+**Submitted:** 2026-07-15T16:26:37.814Z  
 
 ```py
 # cook your dish here
